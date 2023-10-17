@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import MyCars from "./Components/Mycars";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // importer bootstrap
+import "bootstrap/dist/js/bootstrap.bundle.js"; // importer son JS
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    // State (état, donnnés, data)
+    State = {
+        titre: "Mon catalogue de voitures"
+    }
+
+    // Comportements
+
+    // Affichage (render)
+    render() {
+        return (
+            <div className="App">
+                <MyCars title={this.State.titre} />
+            </div>
+        );
+    }
 }
 
 export default App;
