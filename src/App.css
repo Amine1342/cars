@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+h1.style {
+  color: red;
+  text-transform: uppercase;
+}
