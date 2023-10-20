@@ -6,18 +6,10 @@ class MyCars extends React.Component {
         alert("Voler c'est mal !");
     };
 
-    addStyle = (e) => {
-        if (e.target.classList.contains("style")) {
-            e.target.classList.remove("style");
-        } else {
-            e.target.classList.add("style");
-        }
-    };
-
     render() {
         return (
             <div>
-                <h1 onMouseOver={this.addStyle}>{this.props.title}</h1>
+                <h1>{this.props.title}</h1>
                 <p onCopy={this.noCopy}>
                     Un texte que je ne devrais pas pouvoir copier
                 </p>
